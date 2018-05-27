@@ -1,9 +1,9 @@
-FROM morphix/debian-jessie-oracle-jdk-8
+FROM morphix/debian-stretch-oracle-jdk-8
 
 # Setup useful environment variables
 ENV CONFLUENCE_HOME     /var/atlassian/application-data/confluence
 ENV CONFLUENCE_INSTALL  /opt/atlassian/confluence
-ENV CONF_VERSION 6.7.1
+ENV CONF_VERSION 6.9.0
 
 ENV CONFLUENCE_DOWNLOAD_URL http://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-${CONF_VERSION}.tar.gz
 
