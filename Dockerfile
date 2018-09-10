@@ -5,6 +5,9 @@ ENV CONFLUENCE_HOME     /var/atlassian/application-data/confluence
 ENV CONFLUENCE_INSTALL  /opt/atlassian/confluence
 ENV CONF_VERSION 6.11.0
 
+ENV JAVA_CACERTS  $JAVA_HOME/jre/lib/security/cacerts
+ENV CERTIFICATE $CONF_HOME/certificate
+
 ENV CONFLUENCE_DOWNLOAD_URL http://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-${CONF_VERSION}.tar.gz
 
 ENV MYSQL_VERSION 8.0.12
