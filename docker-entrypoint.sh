@@ -13,8 +13,8 @@ if [ "$(stat --format "%Y" "${CONFLUENCE_INSTALL}/conf/server.xml")" -eq "0" ]; 
   if [ -n "${X_PROXY_SCHEME}" ]; then
     xmlstarlet ed --inplace --pf --ps --insert '//Connector[@port="8090"]' --type "attr" --name "scheme" --value "${X_PROXY_SCHEME}" "${CONFLUENCE_INSTALL}/conf/server.xml"
   fi
-  if [ -n "${X_SECURE}" ]; then
-    xmlstarlet ed --inplace --pf --ps --insert '//Connector[@port="8090"]' --type "attr" --name "secure" --value "${X_SECURE}" "${CONFLUENCE_INSTALL}/conf/server.xml"
+  if [ -n "${X_PROXY_SECURE}" ]; then
+    xmlstarlet ed --inplace --pf --ps --insert '//Connector[@port="8090"]' --type "attr" --name "secure" --value "${X_PROXY_SECURE}" "${CONFLUENCE_INSTALL}/conf/server.xml"
   fi
   if [ -n "${X_PATH}" ]; then
     xmlstarlet ed --inplace --pf --ps --update '//Context/@path' --value "${X_PATH}" "${CONFLUENCE_INSTALL}/conf/server.xml"
