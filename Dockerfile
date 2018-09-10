@@ -73,4 +73,4 @@ COPY docker-entrypoint.sh /
 ENTRYPOINT ["sh","/docker-entrypoint.sh"]
 
 # Run Atlassian Confluence as a foreground process by default.
-CMD ["./bin/catalina.sh", "run"]
+CMD ["/opt/atlassian/confluence/bin/start-confluence.sh", "-fg"]
