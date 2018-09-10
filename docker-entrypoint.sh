@@ -21,4 +21,8 @@ if [ "$(stat --format "%Y" "${CONFLUENCE_INSTALL}/conf/server.xml")" -eq "0" ]; 
   fi
 fi
 
+if [ -f "${CERTIFICATE}" ]; then
+  keytool -noprompt -storepass changeit -keystore ${JAVA_CACERTS} -import -file ${CERTIFICATE} -alias CompanyCA
+fi
+
 exec "$@"
